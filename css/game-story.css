@@ -10,10 +10,10 @@
   width: 90%;
   position: relative;
   margin: auto;
-  height:90% ;
   margin-top: 65px;
   margin-bottom: 50px;
 }
+
 #tell1 {
   color: white;
   position: absolute;
@@ -31,7 +31,7 @@
   text-align: center;
   width: 70%;
   margin-left: 180px;
-  top:460px;
+  bottom:3px;
   font-size:xx-large;
   background-color: rgba(0, 0, 0, 0.281);
   border-radius:24px;
@@ -70,8 +70,6 @@
   margin-left: 20px;
 }
 
-
-
 .active:hover {
   background-color: #717171;
 }
@@ -96,7 +94,6 @@
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 } 
-
 
 /* Start Media Section */
 
