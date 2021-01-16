@@ -41,7 +41,7 @@ function keyListen(keyObject) {
         else if (MAIN_CHARACTER_STATE == STAND) {
             var callBackJump = mainCharacter.jumpOnly_function.bind(mainCharacter)
             if (jumpIntervalID == undefined)
-                jumpIntervalID = setInterval(callBackJump, 80);
+                jumpIntervalID = setInterval(callBackJump, 100);
             MAIN_CHARACTER_STATE = JUMPING;
         }
     }
@@ -49,7 +49,7 @@ function keyListen(keyObject) {
         if (MAIN_CHARACTER_STATE == STAND) {
             var callBackMove = mainCharacter.forwardMove.bind(mainCharacter)
             if (moveIntervalID == undefined)
-                moveIntervalID = setInterval(callBackMove, 80)
+                moveIntervalID = setInterval(callBackMove, 100)
             MAIN_CHARACTER_STATE = MOVING;
         }
         // for injection
