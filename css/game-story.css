@@ -11,8 +11,9 @@
   position: relative;
   margin: auto;
   height:90% ;
-margin-top: 65px;
-margin-bottom: 50px;}
+  margin-top: 65px;
+  margin-bottom: 50px;
+}
 #tell1 {
   color: white;
   position: absolute;
@@ -95,3 +96,14 @@ margin-bottom: 50px;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 } 
+
+
+/* Start Media Section */
+
+@media screen and (min-height: 700px) {
+  #immg {
+    height: 630px;
+  }
+}
+
+/* End Media Section */
