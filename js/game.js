@@ -35,13 +35,13 @@ function keyListen(keyObject) {
             mainCharacter.stopMove();
             var callBackJump = mainCharacter.jumpWithMove_function.bind(mainCharacter)
             if (jumpIntervalID == undefined)
-                jumpIntervalID = setInterval(callBackJump, 80);
+                jumpIntervalID = setInterval(callBackJump, 70);
             MAIN_CHARACTER_STATE = JUMPING;
         }
         else if (MAIN_CHARACTER_STATE == STAND) {
             var callBackJump = mainCharacter.jumpOnly_function.bind(mainCharacter)
             if (jumpIntervalID == undefined)
-                jumpIntervalID = setInterval(callBackJump, 90);
+                jumpIntervalID = setInterval(callBackJump, 70);
             MAIN_CHARACTER_STATE = JUMPING;
         }
     }
@@ -49,7 +49,7 @@ function keyListen(keyObject) {
         if (MAIN_CHARACTER_STATE == STAND) {
             var callBackMove = mainCharacter.forwardMove.bind(mainCharacter)
             if (moveIntervalID == undefined)
-                moveIntervalID = setInterval(callBackMove, 90)
+                moveIntervalID = setInterval(callBackMove, 70)
             MAIN_CHARACTER_STATE = MOVING;
         }
         // for injection
