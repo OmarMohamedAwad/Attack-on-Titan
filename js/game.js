@@ -34,13 +34,13 @@ function keyListen(keyObject) {
             mainCharacter.stopMove();
             var callBackJump = mainCharacter.jumpWithMove_function.bind(mainCharacter)
             if (jumpIntervalID == undefined)
-                jumpIntervalID = setInterval(callBackJump, 100);
+                jumpIntervalID = setInterval(callBackJump, 70);
             MAIN_CHARACTER_STATE = JUMPING;
         }
         else if (MAIN_CHARACTER_STATE == STAND) {
             var callBackJump = mainCharacter.jumpOnly_function.bind(mainCharacter)
             if (jumpIntervalID == undefined)
-                jumpIntervalID = setInterval(callBackJump, 100);
+                jumpIntervalID = setInterval(callBackJump, 70);
             MAIN_CHARACTER_STATE = JUMPING;
         }
     }
@@ -49,7 +49,7 @@ function keyListen(keyObject) {
         if (MAIN_CHARACTER_STATE == STAND) {
             var callBackMove = mainCharacter.forwardMove.bind(mainCharacter)
             if (moveIntervalID == undefined)
-                moveIntervalID = setInterval(callBackMove, 100)
+                moveIntervalID = setInterval(callBackMove, 70)
             MAIN_CHARACTER_STATE = MOVING;
         }
         // for injection collision 
@@ -134,8 +134,11 @@ function countdown() {
             mainCharacter.endGame();
         }
 
-        // genetate injection in game every 10 second  
-        if (seconds % 10 == 0) {
+        // Genetate injection in game every 10 second in level 2,3 
+        // and every 20 
+        if (seconds % 10 == 0 && levelId > 1) {
+            Injection.injectionMovementStart();
+        }else if(seconds % 20 == 0) {
             Injection.injectionMovementStart();
         }
 
